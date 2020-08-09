@@ -7,7 +7,7 @@ You can alternatively run the [bare version](https://github.com/urbanij/ScanYour
 
 
 
-![](./img1.png)
+![](https://raw.githubusercontent.com/urbanij/ScanYourPdf/master/img1.png)
 
 
 
