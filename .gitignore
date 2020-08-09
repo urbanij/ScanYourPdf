@@ -2,7 +2,7 @@
 __pycache__/
 *.db
 
-
+aux
 data.py
 
 TODO.txt
