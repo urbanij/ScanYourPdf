@@ -3,7 +3,7 @@
 ##### Make it look like a PDF has been hand signed and scanned
 Telegram bot for turning PDFs into scanned-looking PDFs. https://t.me/ScanYourPdf_bot
 
-You can alternatively run the [bare version](https://github.com/urbanij/ScanYourPdf/bare) locally with this script.
+You can alternatively run the [bare version](https://github.com/urbanij/ScanYourPdf/tree/master/bare) locally with this script.
 
 
 
