@@ -12,10 +12,11 @@ Telegram bot for turning PDFs into scanned-looking PDFs. https://t.me/ScanYourPd
 
 You can alternatively run the [bare version](https://github.com/urbanij/ScanYourPdf/tree/master/bare) locally with this script.
 
+<br>
 
-
-
-
+##### Install dependencies:
+Imagemagick:<br>
+on macOS: `brew install imagemagick`
 
 ---
 
