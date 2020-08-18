@@ -1,13 +1,19 @@
 # ScanYourPdf 
 
 ##### Make it look like a PDF has been hand signed and scanned
+
+![](https://raw.githubusercontent.com/urbanij/ScanYourPdf/master/img/img1.png)
+
+---
+
 Telegram bot for turning PDFs into scanned-looking PDFs. https://t.me/ScanYourPdf_bot
+
+![](https://raw.githubusercontent.com/urbanij/ScanYourPdf/master/img/telegram_screenshot.png)
 
 You can alternatively run the [bare version](https://github.com/urbanij/ScanYourPdf/tree/master/bare) locally with this script.
 
 
 
-![](https://raw.githubusercontent.com/urbanij/ScanYourPdf/master/img1.png)
 
 
 
