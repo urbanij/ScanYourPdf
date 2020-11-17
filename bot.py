@@ -65,7 +65,7 @@ FOLDER_RECEIVED_PDFS = "download"
 
 def send_start_message(chat_id):
     # bot.send_message(chat_id, "Hey, welcome!\nSend me a PDF and I'll send you back a scanned-looking version of it.\nWrite /options to choose between b/w scan and rgb scan.")
-    bot.send_message(chat_id, "Hey, welcome!\nSend me a PDF and I'll send you back a scanned-looking version of it.")
+    bot.send_message(chat_id, "Hey, welcome!\nSend me a PDF and I'll send you back a scanned-looking version of it.\nIf you type #feedback inside your message it will be forwarded to the author.")
 
 
 
@@ -86,6 +86,8 @@ def on_chat_message(message):
 
         elif message.text == "/options":
             pass
+        elif "#feedback" in message.text:
+            bot.send_message(MYTELEGRAMID, message, disable_notification=True)
         else:
             bot.send_message(chat_id, "👍")          # why not 
 
