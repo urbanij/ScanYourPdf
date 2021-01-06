@@ -65,7 +65,13 @@ FOLDER_RECEIVED_PDFS = "download"
 
 def send_start_message(chat_id):
     # bot.send_message(chat_id, "Hey, welcome!\nSend me a PDF and I'll send you back a scanned-looking version of it.\nWrite /options to choose between b/w scan and rgb scan.")
-    bot.send_message(chat_id, "Hey, welcome!\nSend me a PDF and I'll send you back a scanned-looking version of it.\nIf you type #feedback inside your message it will be forwarded to the author.")
+    bot.send_message(chat_id, """Welcome!
+Send me a PDF and I'll send you back a scanned-looking version of it.
+
+If you type #feedback inside your message it will be forwarded to the author.
+
+If you find this bot useful please consider [giving it a star on Github](https://github.com/urbanij/ScanYourPdf) and forking the repo. ✌️
+""", parse_mode='Markdown')
 
 
 
@@ -84,8 +90,9 @@ def on_chat_message(message):
             with Database(DATABASE_URL) as db:
                 db.execute("INSERT INTO  users (chat_id, state, options, files_scanned, data_scanned) VALUES (%s, %s, %s, %s, %s) ON CONFLICT (chat_id) DO NOTHING", (chat_id, "INIT", "rgb", 0, 0))
 
-        elif message.text == "/options":
-            pass
+        elif message.text == "/options" or message.text == "/help":
+            send_start_message(chat_id)
+
         elif "#feedback" in message.text:
             bot.send_message(MYTELEGRAMID, message, disable_notification=True)
         else:
