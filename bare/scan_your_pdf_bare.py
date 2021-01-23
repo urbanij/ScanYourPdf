@@ -15,10 +15,10 @@ def processPDF(input_document, bw=True):
         command += f"-colorspace gray " 
     command += f"{input_document} "
     command += f"-linear-stretch 3.5%x10% "
-    command += f"-blur 0x0.5 "
+    command += f"-blur 0x0.2 "
     command += f"-attenuate 0.3 "
     command += f"+noise Gaussian "
-    command += f"-rotate 0.5 "
+    command += f"-rotate 0.6 "
     command += f"{input_document.replace('.pdf', '')}_scanned_{t}.pdf"
     
     rv = os.system(command)  
@@ -34,16 +34,10 @@ if __name__ == '__main__':
     try:
         input_document = sys.argv[1]
     except Exception as e:
-        print("pass file to convert")
-        exit(1)
+        raise("pass file to convert")
 
 
-
-
-    bw = False
-
-
-    rv = processPDF(input_document, bw)
+    rv = processPDF(input_document)
 
     if rv:
         print("Error, your PDF couldn't be processed correctly.")
